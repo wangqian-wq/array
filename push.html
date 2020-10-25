@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>  
+<body>
+    <script type="text/javascript">
+    //push unshift-> 返回值，都执行了方法以后数组的长度
+        var arr = [2, 3, 4];
+        //arr.push(1, 2, 3);//arguments
+        Array.prototype.myPush = function(){
+            for(var i = 0; i < arguments.length; i++){
+                this[this.length] = arguments[i];
+            }
+            return this.length;//1
+        }
+        
+        arr.myPush(1, 2, 3);//2
+        console.log(arr);
+
+    </script>
+</body>
+</html>

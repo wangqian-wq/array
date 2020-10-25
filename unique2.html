@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>  
+<body>
+    <script type="text/javascript">
+    var str = '1122334455aabb';
+    String.prototype.unique = function(){
+        var temp = {};
+            newStr = '';
+        for(var i = 0; i < this.length; i++){
+            if(!temp.hasOwnProperty(this[i])){
+                temp[this[i]] = this[i];
+                newStr += this[i];
+            }
+        }
+        return newStr;
+    }
+    console.log(str.unique());
+    </script>
+</body>
+</html>

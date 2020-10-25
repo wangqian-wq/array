@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>  
+<body>
+    <script type="text/javascript">
+    var arr = [0, 0, 1, 1, 2, 2, 3, 3, 3, 'a', 'a'];
+    Array.prototype.unique = function(){
+        var temp = {};
+            newArr = [];
+        for(var i = 0; i < this.length; i++){
+            if(!temp.hasOwnProperty(this[i])){
+                temp[this[i]] = this[i];
+                newArr.push(this[i]);
+            }
+        }
+        return newArr;
+    }
+    console.log(arr.unique());
+    var obj = {
+        name: '123'
+    }
+    console.log(obj.hasOwnProperty('name'));
+    </script>
+</body>
+</html>

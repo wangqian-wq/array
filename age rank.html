@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       var arr = [
+           {
+               son: 'Jenny',
+               age: 18
+           },
+           {
+               son: 'Jone',
+               age: 10
+           },
+           {
+               son: 'Ben',
+               age: 16
+           },
+           {
+               son: 'Crytal',
+               age: 3
+           },
+           {
+               son: 'Lucy',
+               age: 11
+           },
+       ];
+       arr.sort(function(a, b){
+           if(a.age > b.age){
+               return 1;
+           }else{
+               return -1;
+           }
+       });
+
+       console.log(arr);
+
+       var arr1 = ['12345', '1', '1234', '12', '1234567'];
+       arr1.sort(function(a, b){
+           if(a.length > b.length){
+               return 1;
+           }else{
+               return -1;
+           }
+        //    return a.length - b.length;
+       });
+       console.log(arr1);
+    //    修改原数组： push/unshift pop/shift reverse splice sort 
+        
+    
+        </script>
+</body>
+</html>

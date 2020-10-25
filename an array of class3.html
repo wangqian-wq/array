@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+      var obj = { 
+          '2': 3,
+          '3': 4,
+          'length': 2,
+          'push': Array.prototype.push,
+          'splice': Array.prototype.splice
+      }
+      obj.push(1);
+      obj.push(2);
+      console.log(obj);
+    //   Array.prototype.push = function(elem){
+    //       this[this.length] =elem;
+    //       this.length ++;
+    //   }
+    obj[2] = 1;
+    obj[3] = 2;
+
+    </script>
+</body>
+</html>

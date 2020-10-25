@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       //数组按照元素的字节数排序
+       //unidode 0-255 1个字节 256- 2个字节
+       function getBytes(str){
+           var bytes = str.length;
+
+           for(var i = 0; i < str.length; i++){
+               if(str.charCodeAt(i) > 255){
+                   bytes++;
+               }
+           }
+           return bytes;
+       }
+       console.log(getBytes('爱你'));
+
+    //     var arr = ['我爱你', 'OK', 'Hello', '你说WHAT', '可以'];
+    //     arr.sort(function(a,b){
+    //         return getBytes(a) - getBytes(b);
+    //     });
+    //     console.log(arr);
+    //    function getBytes(str){
+    //        var bytes = str.length;
+
+    //        for(var i = 0; i < str.length; i++){
+    //            if(str.charCodeAt(i) > 255){
+    //                bytes++;
+    //            }
+    //        }
+    //        return bytes;
+    //    }
+    </script>
+</body>
+</html>

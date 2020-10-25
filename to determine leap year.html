@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>  
+<body>
+    <script type="text/javascript">
+    var year = window.prompt('请输入年份');
+        //1. 整除4并且不能整除100
+        //2.整除400
+        console.log(isLeapYear(year));
+        function isLeapYear(year){
+            // if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+            //     return '是闰年';
+            // }else{
+            //     return '不是闰年';
+            // }
+            var res = '';
+            return res = (year % 4 === 0 && year % 100 !== 0)
+            ||
+            (year % 400 === 0)
+            ?
+            '是闰年'
+            :
+            '不是闰年';
+        }
+
+
+
+    </script>
+</body>
+</html>
